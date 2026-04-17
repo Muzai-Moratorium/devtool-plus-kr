@@ -6,7 +6,7 @@
     "version": "0.5.0",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Muzai-Moratorium/devtool-plus.git"
+        "url": "https://github.com/Muzai-Moratorium/devtool-plus-kr.git"
     },
     "galleryBanner": {
         "color": "#161616",
@@ -34,17 +34,17 @@
     "icon": "media/devtool-plus-logo.png",
     "badges": [
         {
-            "url": "https://img.shields.io/github/stars/Muzai-Moratorium/devtool-plus?style=social",
-            "href": "https://github.com/Muzai-Moratorium/devtool-plus",
+            "url": "https://img.shields.io/github/stars/Muzai-Moratorium/devtool-plus-kr?style=social",
+            "href": "https://github.com/Muzai-Moratorium/devtool-plus-kr",
             "description": "Star on GitHub"
         }
     ],
-    "homepage": "https://github.com/Muzai-Moratorium/devtool-plus",
+    "homepage": "https://github.com/Muzai-Moratorium/devtool-plus-kr",
     "bugs": {
-        "url": "https://github.com/Muzai-Moratorium/devtool-plus/issues"
+        "url": "https://github.com/Muzai-Moratorium/devtool-plus-kr/issues"
     },
-    "changelog": "https://github.com/Muzai-Moratorium/devtool-plus/blob/main/CHANGELOG.md",
-    "privacy": "https://github.com/Muzai-Moratorium/devtool-plus/blob/main/PRIVACY.md",
+    "changelog": "https://github.com/Muzai-Moratorium/devtool-plus-kr/blob/main/CHANGELOG.md",
+    "privacy": "https://github.com/Muzai-Moratorium/devtool-plus-kr/blob/main/PRIVACY.md",
     "activationEvents": [],
     "main": "./dist/extension.js",
     "contributes": {

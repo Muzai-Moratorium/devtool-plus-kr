@@ -25,13 +25,13 @@ DevTool+ 한국어.ver
   <a href="https://open-vsx.org/extension/JiHoonKim/devtool-plus-kr">
     <img src="https://img.shields.io/badge/OpenVSX-DevTool%2B_KR-6537fb?style=flat-square&labelColor=1f1f1f" alt="Open VSX" />
   </a>
-  <a href="https://github.com/Muzai-Moratorium/devtool-plus/releases">
-    <img src="https://img.shields.io/github/v/release/Muzai-Moratorium/devtool-plus?style=flat-square&color=fb8237&labelColor=1f1f1f" alt="Latest Release" />
+  <a href="https://github.com/Muzai-Moratorium/devtool-plus-kr/releases">
+    <img src="https://img.shields.io/github/v/release/Muzai-Moratorium/devtool-plus-kr?style=flat-square&color=fb8237&labelColor=1f1f1f" alt="Latest Release" />
   </a>
-  <a href="https://github.com/Muzai-Moratorium/devtool-plus">
-    <img src="https://img.shields.io/github/stars/Muzai-Moratorium/devtool-plus?style=flat-square&color=fff&labelColor=1f1f1f" alt="GitHub Stars" />
+  <a href="https://github.com/Muzai-Moratorium/devtool-plus-kr">
+    <img src="https://img.shields.io/github/stars/Muzai-Moratorium/devtool-plus-kr?style=flat-square&color=fff&labelColor=1f1f1f" alt="GitHub Stars" />
   </a>
-  <a href="https://github.com/Muzai-Moratorium/devtool-plus/blob/main/LICENSE">
+  <a href="https://github.com/Muzai-Moratorium/devtool-plus-kr/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square&color=d4fb37&labelColor=1f1f1f" alt="MIT License" />
   </a>
 </p>
