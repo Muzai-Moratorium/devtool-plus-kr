@@ -19,23 +19,20 @@ DevTool+ 한국어.ver
 </p>
 
 <p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=Fuzionix.devtool-plus">
-    <img src="https://img.shields.io/badge/VS%20Code-DevTool%2B-3799fb?style=flat-square&labelColor=1f1f1f" alt="VS Code Extension" />
+  <a href="https://marketplace.visualstudio.com/items?itemName=JiHoonKim.devtool-plus-kr">
+    <img src="https://img.shields.io/badge/VS%20Code-DevTool%2B_KR-3799fb?style=flat-square&labelColor=1f1f1f" alt="VS Code Extension" />
   </a>
-  <a href="https://open-vsx.org/extension/Fuzionix/devtool-plus">
-    <img src="https://img.shields.io/badge/OpenVSX-DevTool%2B-6537fb?style=flat-square&labelColor=1f1f1f" alt="Open VSX" />
+  <a href="https://open-vsx.org/extension/JiHoonKim/devtool-plus-kr">
+    <img src="https://img.shields.io/badge/OpenVSX-DevTool%2B_KR-6537fb?style=flat-square&labelColor=1f1f1f" alt="Open VSX" />
   </a>
-  <a href="https://github.com/fuzionix/devtool-plus/releases">
-    <img src="https://img.shields.io/github/v/release/fuzionix/devtool-plus?style=flat-square&color=fb8237&labelColor=1f1f1f" alt="Latest Release" />
+  <a href="https://github.com/Muzai-Moratorium/devtool-plus/releases">
+    <img src="https://img.shields.io/github/v/release/Muzai-Moratorium/devtool-plus?style=flat-square&color=fb8237&labelColor=1f1f1f" alt="Latest Release" />
   </a>
-  <a href="https://github.com/fuzionix/devtool-plus">
-    <img src="https://img.shields.io/github/stars/fuzionix/devtool-plus?style=flat-square&color=fff&labelColor=1f1f1f" alt="GitHub Stars" />
+  <a href="https://github.com/Muzai-Moratorium/devtool-plus">
+    <img src="https://img.shields.io/github/stars/Muzai-Moratorium/devtool-plus?style=flat-square&color=fff&labelColor=1f1f1f" alt="GitHub Stars" />
   </a>
-  <a href="https://github.com/fuzionix/devtool-plus/blob/main/LICENSE">
+  <a href="https://github.com/Muzai-Moratorium/devtool-plus/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square&color=d4fb37&labelColor=1f1f1f" alt="MIT License" />
-  </a>
-  <a href="https://github.com/fuzionix/devtool-plus/issues">
-    <img src="https://img.shields.io/github/issues/fuzionix/devtool-plus?style=flat-square&color=fb5437&labelColor=1f1f1f" alt="Issues" />
   </a>
 </p>
 
@@ -45,8 +42,7 @@ DevTool+ 한국어.ver
   <img src="https://raw.githubusercontent.com/fuzionix/devtool-plus/refs/heads/main/media/devtool-plus-demo.gif" alt="Demo" width="840" />
 </p>
 
-`<a name="korean"></a>`
-
+<a name="korean"></a>
 ## 🌏 한국어
 
 ### 소개
@@ -69,19 +65,19 @@ DevTool+ 한국어.ver
 ### 설치 방법
 
 <p align="center">
-  에디터의 확장 프로그램 마켓플레이스에서 "<b>DevTool+</b>"를 검색하거나 아래 링크를 통해 설치할 수 있습니다.
+  에디터의 확장 프로그램 마켓플레이스에서 "<b>DevTool+ KR</b>"를 검색하거나 아래 링크를 통해 설치할 수 있습니다.
 </p>
 
 <p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=Fuzionix.devtool-plus">Visual Studio Code</a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=JiHoonKim.devtool-plus-kr">Visual Studio Code</a>
   <span>|</span>
-  <a href="https://open-vsx.org/extension/Fuzionix/devtool-plus">Cursor</a>
+  <a href="https://open-vsx.org/extension/JiHoonKim/devtool-plus-kr">Cursor</a>
   <span>|</span>
-  <a href="https://open-vsx.org/extension/Fuzionix/devtool-plus">Windsurf</a>
+  <a href="https://open-vsx.org/extension/JiHoonKim/devtool-plus-kr">Windsurf</a>
 </p>
 
 ```sh
-code --install-extension Fuzionix.devtool-plus
+code --install-extension JiHoonKim.devtool-plus-kr
 ```
 
 ### 도구 목록
@@ -103,7 +99,7 @@ code --install-extension Fuzionix.devtool-plus
     <td align="center">✅</td>
   </tr>
   <tr>
-    <td>URL 인코더</td>
+    <td>URL 인코더 / 디코더</td>
     <td align="center">1.0.1</td>
     <td align="center"></td>
     <td align="center">✅</td>
@@ -133,6 +129,204 @@ code --install-extension Fuzionix.devtool-plus
     <td align="center">🆕</td>
   </tr>
 
+  <tr>
+    <th colspan="4">[UI / UX 디자인]</th>
+  </tr>
+  <tr>
+    <td>색상 변환기</td>
+    <td align="center">1.2.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>색상 팔레트 생성기</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>그라데이션 메이커</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>Cubic Bezier 애니메이션</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>대비 검사기 (WCAG)</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>색상 믹서</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+
+  <tr>
+    <th colspan="4">[데이터 조작]</th>
+  </tr>
+  <tr>
+    <td>UUID 생성기</td>
+    <td align="center">1.1.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>데이터 형식 변환기</td>
+    <td align="center">1.2.0</td>
+    <td align="center">✅</td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>JSON 에디터</td>
+    <td align="center">1.1.0</td>
+    <td align="center">✅</td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>YAML 에디터</td>
+    <td align="center">1.1.0</td>
+    <td align="center">✅</td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>HTML / XML 에디터</td>
+    <td align="center">1.1.0</td>
+    <td align="center">✅</td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>날짜/시간 변환기</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+
+  <tr>
+    <th colspan="4">[텍스트 유틸리티]</th>
+  </tr>
+  <tr>
+    <td>텍스트 비교기 (Diff Check)</td>
+    <td align="center">1.1.0</td>
+    <td align="center">✅</td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>마크다운 표 생성기</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>로렘 입숨 생성기</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">🆕</td>
+  </tr>
+  <tr>
+    <td>슬러그 생성기 (Slug)</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+
+  <tr>
+    <th colspan="4">[개발자 유틸리티]</th>
+  </tr>
+  <tr>
+    <td>QR 코드 생성기</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>HTTP 상태 코드 조회</td>
+    <td align="center">1.0.1</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>데이터 단위 변환기</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>단락 경로 변환기 (UNIX/Win)</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>진법 변환기</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+
+  <tr>
+    <th colspan="4">[암호화]</th>
+  </tr>
+  <tr>
+    <td>토큰 생성기</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>비밀번호 생성기</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>JWT 분석기</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>AES 암호화 / 복호화</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>SHA 해시 생성기</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>RSA 키 쌍 생성기</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>RSA 암호화 / 복호화</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>전자서명 생성 / 검증</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="right">✅ = 출시됨 | 🚧 = 개발 중 | 🆕 = 신규 추가</td>
+  </tr>
+</table>
+
 ### 자주 묻는 질문 (FAQ)
 
 **이 확장은 텔레메트리나 사용 데이터를 수집하나요?**
@@ -146,8 +340,7 @@ DevTool+는 가벼운 웹 컴포넌트 라이브러리인 **Lit**을 사용하�
 
 ---
 
-`<a name="english"></a>`
-
+<a name="english"></a>
 ## 🌐 English
 
 ### Introduction
@@ -170,19 +363,19 @@ The extension keeping everything inside code editor and running entirely on your
 ### Installation
 
 <p align="center">
-  Directly search for "<b>DevTool+</b>" in your code editor's extension marketplace. Or install through
+  Directly search for "<b>DevTool+ KR</b>" in your code editor's extension marketplace. Or install through
 </p>
 
 <p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=Fuzionix.devtool-plus">Visual Studio Code</a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=JiHoonKim.devtool-plus-kr">Visual Studio Code</a>
   <span>|</span>
-  <a href="https://open-vsx.org/extension/Fuzionix/devtool-plus">Cursor</a>
+  <a href="https://open-vsx.org/extension/JiHoonKim/devtool-plus-kr">Cursor</a>
   <span>|</span>
-  <a href="https://open-vsx.org/extension/Fuzionix/devtool-plus">Windsurf</a>
+  <a href="https://open-vsx.org/extension/JiHoonKim/devtool-plus-kr">Windsurf</a>
 </p>
 
 ```sh
-code --install-extension Fuzionix.devtool-plus
+code --install-extension JiHoonKim.devtool-plus-kr
 ```
 
 ### Tool List
@@ -204,7 +397,7 @@ code --install-extension Fuzionix.devtool-plus
     <td align="center">✅</td>
   </tr>
   <tr>
-    <td>URL Encoder</td>
+    <td>URL Encoder / Decoder</td>
     <td align="center">1.0.1</td>
     <td align="center"></td>
     <td align="center">✅</td>
@@ -233,6 +426,204 @@ code --install-extension Fuzionix.devtool-plus
     <td align="center"></td>
     <td align="center">🆕</td>
   </tr>
+
+  <tr>
+    <th colspan="4">[UI / UX Design]</th>
+  </tr>
+  <tr>
+    <td>Color Convertor</td>
+    <td align="center">1.2.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>Color Palette Generator</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>Gradient Maker</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>Cubic Bezier</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>Contrast Checker</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>Color Mixer</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+
+  <tr>
+    <th colspan="4">[Data Manipulation]</th>
+  </tr>
+  <tr>
+    <td>UUID Generator</td>
+    <td align="center">1.1.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>Data Format Convertor</td>
+    <td align="center">1.2.0</td>
+    <td align="center">✅</td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>JSON Editor</td>
+    <td align="center">1.1.0</td>
+    <td align="center">✅</td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>YAML Editor</td>
+    <td align="center">1.1.0</td>
+    <td align="center">✅</td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>HTML / XML Editor</td>
+    <td align="center">1.1.0</td>
+    <td align="center">✅</td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>Datetime Convertor</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+
+  <tr>
+    <th colspan="4">[Text]</th>
+  </tr>
+  <tr>
+    <td>Difference Checker</td>
+    <td align="center">1.1.0</td>
+    <td align="center">✅</td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>Markdown Table Builder</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>Lorem Ipsum Generator</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">🆕</td>
+  </tr>
+  <tr>
+    <td>Slug Generator</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+
+  <tr>
+    <th colspan="4">[Utility]</th>
+  </tr>
+  <tr>
+    <td>QR Code Generator</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>HTTP Status Code</td>
+    <td align="center">1.0.1</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>Data Unit Converter</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>UNIX / Windows Path Convertor</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>Number Base Convertor</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+
+  <tr>
+    <th colspan="4">[Cryptography]</th>
+  </tr>
+  <tr>
+    <td>Token Generator</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>Password Generator</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>JWT Inspector</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>AES Encryption / Decryption</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>SHA Hashing</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>RSA Key Generator</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>RSA Encryption / Decryption</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td>Signature Signer / Verifier</td>
+    <td align="center">1.0.0</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="right">✅ = Released | 🚧 = In Progress | 🆕 = New</td>
+  </tr>
+</table>
 
 ### FAQ
 

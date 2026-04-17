@@ -1,16 +1,12 @@
 {
-    "name": "devtool-plus",
-    "displayName": "DevTool+",
-    "publisher": "Fuzionix",
+    "name": "devtool-plus-kr",
+    "displayName": "DevTool+ KR",
+    "publisher": "JiHoonKim",
     "description": "%extension.description%",
     "version": "0.5.0",
     "repository": {
         "type": "git",
-        "url": "https://github.com/fuzionix/devtool-plus.git"
-    },
-    "engines": {
-        "node": ">=18 <21",
-        "vscode": "^1.62.0"
+        "url": "https://github.com/Muzai-Moratorium/devtool-plus.git"
     },
     "galleryBanner": {
         "color": "#161616",
@@ -31,26 +27,24 @@
         "hashing",
         "encryption",
         "developer",
-        "development"
+        "development",
+        "korean",
+        "localization"
     ],
     "icon": "media/devtool-plus-logo.png",
     "badges": [
         {
-            "url": "https://img.shields.io/github/stars/fuzionix/devtool-plus?style=social",
-            "href": "https://github.com/fuzionix/devtool-plus",
+            "url": "https://img.shields.io/github/stars/Muzai-Moratorium/devtool-plus?style=social",
+            "href": "https://github.com/Muzai-Moratorium/devtool-plus",
             "description": "Star on GitHub"
         }
     ],
-    "homepage": "https://github.com/fuzionix/devtool-plus",
+    "homepage": "https://github.com/Muzai-Moratorium/devtool-plus",
     "bugs": {
-        "url": "https://github.com/fuzionix/devtool-plus/issues"
+        "url": "https://github.com/Muzai-Moratorium/devtool-plus/issues"
     },
-    "changelog": "https://github.com/fuzionix/devtool-plus/blob/main/CHANGELOG.md",
-    "privacy": "https://github.com/fuzionix/devtool-plus/blob/main/PRIVACY.md",
-    "funding": {
-        "type": "github",
-        "url": "https://github.com/sponsors/fuzionix"
-    },
+    "changelog": "https://github.com/Muzai-Moratorium/devtool-plus/blob/main/CHANGELOG.md",
+    "privacy": "https://github.com/Muzai-Moratorium/devtool-plus/blob/main/PRIVACY.md",
     "activationEvents": [],
     "main": "./dist/extension.js",
     "contributes": {
@@ -183,6 +177,10 @@
         "postcss": "^8.5.1",
         "tailwindcss": "^3.4.17",
         "typescript": "^5.4.5"
+    },
+    "engines": {
+        "node": ">=18 <21",
+        "vscode": "^1.62.0"
     },
     "dependencies": {
         "@types/qrcode": "^1.5.5",
