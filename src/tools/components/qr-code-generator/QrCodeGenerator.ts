@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 import { adjustTextareaHeight } from '../../../utils/util';
 import * as QRCode from 'qrcode';
 
@@ -40,7 +41,7 @@ export class QrCodeGenerator extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">QR codes are a type of matrix barcode (or two-dimensional barcode) that can be read by devices such as smartphones and QR code readers.</p>
+                <p class="opacity-75">${t('qr-code-generator', 'tools').description}</p>
                 <hr />
                 
                 <!-- QR Code Preview section -->
@@ -177,7 +178,7 @@ export class QrCodeGenerator extends BaseTool {
                         <textarea
                             id="input-link"
                             class="input-expandable"
-                            placeholder="Enter URL"
+                            placeholder="${t('qr-code-generator', 'tools').placeholder}"
                             rows="1"
                             .value=${this.inputText}
                             @input=${this.handleInput}

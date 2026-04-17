@@ -313,7 +313,7 @@ export class CodeEditorProvider {
                         switch (message.type) {
                             case 'updateTool':
                                 currentToolId = message.tool.id;
-                                document.title = \`DevTool+ - \${message.tool.label}\`;
+                                document.title = 'DevTool+ - ' + message.tool.label;
                                 break;
                             case 'update':
                                 if (message.value && typeof message.value.inputText === 'string') {

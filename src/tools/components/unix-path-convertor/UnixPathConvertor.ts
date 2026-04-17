@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state, query } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 import {
     adjustTextareaHeight,
     renderCopyButton
@@ -27,7 +28,7 @@ export class UnixPathConvertor extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">UNIX paths use forward slashes (/) to separate directories, while Windows paths use backslashes (\\). This tool converts between the two formats.</p>
+                <p class="opacity-75">${t('unix-path-convertor', 'tools').description}</p>
                 <hr />
 
                 <!-- UNIX Path Input Field -->

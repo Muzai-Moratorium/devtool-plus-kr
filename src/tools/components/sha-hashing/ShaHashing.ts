@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state, query } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 import { adjustTextareaHeight, renderCopyButton } from '../../../utils/util';
 
 type HashAlgorithm = 'SHA-256' | 'SHA-384' | 'SHA-512';
@@ -35,7 +36,7 @@ export class ShaHashing extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">SHA (Secure Hash Algorithm) creates fixed-size digital signatures for data, ensuring integrity and authenticity.</p>
+                <p class="opacity-75">${t('sha-hashing', 'tools').description}</p>
                 <hr />
 
                 <!-- Hidden File Input -->

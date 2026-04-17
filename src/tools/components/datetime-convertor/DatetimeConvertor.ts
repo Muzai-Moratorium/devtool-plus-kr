@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 
 @customElement('datetime-convertor')
 export class DatetimeConvertor extends BaseTool {
@@ -52,7 +53,7 @@ export class DatetimeConvertor extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">Convert between different datetime formats.</p>
+                <p class="opacity-75">${t('datetime-convertor', 'tools').description}</p>
                 <hr />
 
                 <div class="flex flex-row-reverse justify-between items-baseline text-xs">

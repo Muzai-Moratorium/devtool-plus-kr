@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 import {
     adjustTextareaHeight,
     renderCopyButton
@@ -29,7 +30,7 @@ export class EscapeHtmlEntities extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">HTML entities are used to represent special characters in HTML. Escaping HTML entities helps prevent code injection and ensures proper rendering of special characters in web pages.</p>
+                <p class="opacity-75">${t('escape-html-entities', 'tools').description}</p>
                 <hr />
 
                 <!-- Radio Group -->
@@ -44,7 +45,7 @@ export class EscapeHtmlEntities extends BaseTool {
                             <span class="text-xs opacity-75 mr-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-slash-icon lucide-square-slash"><rect width="18" height="18" x="3" y="3" rx="2"/><line x1="9" x2="15" y1="15" y2="9"/></svg>
                             </span>
-                            <h4>Escape</h4>
+                            <h4>${t('escape-html-entities', 'tools').escape}</h4>
                         </button>
                         <button 
                             role="radio"
@@ -55,7 +56,7 @@ export class EscapeHtmlEntities extends BaseTool {
                             <span class="text-xs opacity-75 mr-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
                             </span>
-                            <h4>Unescape</h4>
+                            <h4>${t('escape-html-entities', 'tools').unescape}</h4>
                         </button>
                     </div>
                 </div>
@@ -95,7 +96,7 @@ export class EscapeHtmlEntities extends BaseTool {
                     <textarea
                         id="output"
                         class="input-expandable mt-2 pr-6"
-                        placeholder="Output will appear here"
+                        placeholder="${t('escape-html-entities', 'tools').placeholder}"
                         rows="3"
                         readonly
                         .value=${this.output}

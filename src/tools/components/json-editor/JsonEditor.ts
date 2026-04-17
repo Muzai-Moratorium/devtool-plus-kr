@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 
 @customElement('json-editor')
 export class JsonEditor extends BaseTool {
@@ -18,7 +19,7 @@ export class JsonEditor extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">JSON editing tool for modifying JSON data.</p>
+                <p class="opacity-75">${t('json-editor', 'tools').description}</p>
                 <hr />
                 <tool-file-dropzone 
                     accept=".json,application/json" 
@@ -28,11 +29,11 @@ export class JsonEditor extends BaseTool {
                 <div class="flex justify-between mt-2 gap-2">
                     <button id="minify" class="btn-primary gap-2" @click=${() => this.handleAction('minify')}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-minus-icon lucide-square-minus"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M8 12h8"/></svg>
-                        <h4>Minify</h4>
+                        <h4>${t('json-editor', 'tools').minify}</h4>
                     </button>
                     <button id="format" class="btn-outline gap-2" @click=${() => this.handleAction('format')}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-braces-icon lucide-braces"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1"/><path d="M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"/></svg>
-                        <h4>Format</h4>
+                        <h4>${t('json-editor', 'tools').format}</h4>
                     </button>
                 </div>
             </div>

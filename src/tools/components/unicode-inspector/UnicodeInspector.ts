@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state, property } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 import {
     adjustTextareaHeight,
     renderCopyButton
@@ -74,7 +75,7 @@ export class UnicodeInspector extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">Unicode is a standard for representing text in different writing systems. It enables consistent encoding, representation, and handling of text.</p>
+                <p class="opacity-75">${t('unicode-inspector', 'tools').description}</p>
                 <hr />
 
                 <!-- Radio Group -->
@@ -89,7 +90,7 @@ export class UnicodeInspector extends BaseTool {
                             <span class="text-xs opacity-75 mr-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevrons-left-right-square"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m10 15-3-3 3-3"/><path d="m14 9 3 3-3 3"/></svg>
                             </span>
-                            <h4>Encode</h4>
+                            <h4>${t('unicode-inspector', 'tools').encode}</h4>
                         </button>
                         <button 
                             role="radio"
@@ -100,7 +101,7 @@ export class UnicodeInspector extends BaseTool {
                             <span class="text-xs opacity-75 mr-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
                             </span>
-                            <h4>Decode</h4>
+                            <h4>${t('unicode-inspector', 'tools').decode}</h4>
                         </button>
                     </div>
                 </div>
@@ -268,7 +269,7 @@ export class UnicodeInspector extends BaseTool {
                     encoded = `&#x${codePoint.toString(16)};`;
                     break;
                 case 'css':
-                    encoded = `\\${codePoint.toString(16).padStart(4, '0')}`;
+                    encoded = `${codePoint.toString(16).padStart(4, '0')}`;
                     break;
             }
             

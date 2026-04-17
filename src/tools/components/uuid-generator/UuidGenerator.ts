@@ -4,6 +4,7 @@ import { BaseTool } from '../../base/BaseTool';
 import { 
     renderCopyButton 
 } from '../../../utils/util';
+import { t } from '../../../utils/i18n-web';
 import { v1 as uuidv1, v4 as uuidv4 } from 'uuid';
 
 @customElement('uuid-generator')
@@ -28,7 +29,7 @@ export class UUIDGenerator extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">A UUID (Universally Unique Identifier) is a 128-bit unique identifier that uses timestamp or randomness to ensure global uniqueness across space and time.</p>
+                <p class="opacity-75">${t('uuid-generator', 'tools').description}</p>
                 <hr />
 
                 <!-- Version Radio Group -->
@@ -41,7 +42,7 @@ export class UUIDGenerator extends BaseTool {
                             @click=${() => this.handleVersionChange('v1')}
                         >
                             <h4>UUID v1</h4>
-                            <span class="text-xs opacity-75 ml-1">(Time-based)</span>
+                            <span class="text-xs opacity-75 ml-1">(${t('uuid-generator', 'tools').version} 1)</span>
                         </button>
                         <button 
                             role="radio"
@@ -50,7 +51,7 @@ export class UUIDGenerator extends BaseTool {
                             @click=${() => this.handleVersionChange('v4')}
                         >
                             <h4>UUID v4</h4>
-                            <span class="text-xs opacity-75 ml-1">(Random)</span>
+                            <span class="text-xs opacity-75 ml-1">(${t('uuid-generator', 'tools').version} 4)</span>
                         </button>
                     </div>
                 </div>
@@ -62,7 +63,7 @@ export class UUIDGenerator extends BaseTool {
                         @click=${this.generateUUID}
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                        <h4>Generate</h4>
+                        <h4>${t('uuid-generator', 'tools').generate}</h4>
                     </button>
                 </div>
                 <div class="flex justify-center mt-2 opacity-75">
@@ -73,7 +74,7 @@ export class UUIDGenerator extends BaseTool {
                     <textarea
                         id="output"
                         class="input-expandable mt-2 pr-6 font-mono"
-                        placeholder="Output will appear here"
+                        placeholder="${t('uuid-generator', 'tools').placeholder}"
                         rows="3"
                         readonly
                         .value=${this.output}

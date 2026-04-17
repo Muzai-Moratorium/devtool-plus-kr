@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 import { renderCopyButton } from '../../../utils/util';
 
 @customElement('lorem-ipsum')
@@ -52,7 +53,7 @@ export class LoremIpsum extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has been the industry's standard dummy text ever since the 1500s.</p>
+                <p class="opacity-75">${t('lorem-ipsum', 'tools').description}</p>
                 <hr />
 
                 <!-- Amount Slider -->
@@ -162,7 +163,7 @@ export class LoremIpsum extends BaseTool {
                     <textarea
                         id="output"
                         class="input-expandable pr-6"
-                        placeholder="Output will appear here"
+                        placeholder="${t('lorem-ipsum', 'tools').placeholder}"
                         rows="20"
                         readonly
                         .value=${this.output}

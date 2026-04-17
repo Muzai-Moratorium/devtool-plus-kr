@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state, query } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 import { ColorPicker } from '../../common/color-picker/ColorPicker';
 import { colord, extend } from 'colord';
 import namesPlugin from 'colord/plugins/names';
@@ -67,7 +68,7 @@ export class ColorConvertor extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">Convert colors between different formats: HEX, RGB, HSL, HWB, CMYK, XYZ, LCH, and named colors. Edit any format directly or use the color picker.</p>
+                <p class="opacity-75">${t('color-convertor', 'tools').description}</p>
                 <hr />
 
                 <div class="relative flex flex-col items-center">

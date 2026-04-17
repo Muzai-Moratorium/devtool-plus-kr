@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 
 @customElement('yaml-editor')
 export class YamlEditor extends BaseTool {
@@ -18,7 +19,7 @@ export class YamlEditor extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">YAML editing tool for modifying YAML data.</p>
+                <p class="opacity-75">${t('yaml-editor', 'tools').description}</p>
                 <hr />
                 <tool-file-dropzone 
                     accept=".yaml,.yml,application/x-yaml" 
@@ -28,11 +29,11 @@ export class YamlEditor extends BaseTool {
                 <div class="flex justify-between mt-2 gap-2">
                     <button id="minify" class="btn-primary gap-2" @click=${() => this.handleAction('minify')}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-minus-icon lucide-square-minus"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M8 12h8"/></svg>
-                        <h4>Minify</h4>
+                        <h4>${t('yaml-editor', 'tools').minify}</h4>
                     </button>
                     <button id="format" class="btn-outline gap-2" @click=${() => this.handleAction('format')}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-tree-icon lucide-list-tree"><path d="M21 12h-8"/><path d="M21 6H8"/><path d="M21 18h-8"/><path d="M3 6v4c0 1.1.9 2 2 2h3"/><path d="M3 10v6c0 1.1.9 2 2 2h3"/></svg>
-                        <h4>Format</h4>
+                        <h4>${t('yaml-editor', 'tools').format}</h4>
                     </button>
                 </div>
             </div>

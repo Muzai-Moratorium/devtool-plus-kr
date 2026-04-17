@@ -5,6 +5,7 @@ import {
     adjustTextareaHeight,
     renderCopyButton
 } from '../../../utils/util';
+import { t } from '../../../utils/i18n-web';
 
 @customElement('url-encoder')
 export class UrlEncoder extends BaseTool {
@@ -26,7 +27,7 @@ export class UrlEncoder extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">URL encoding converts special characters into a transmitted format over the Internet, replacing unsafe characters with a '%' followed by two hexadecimal digits.</p>
+                <p class="opacity-75">${t('url-encoder', 'tools').description}</p>
                 <hr />
 
                 <!-- Radio Group -->
@@ -41,7 +42,7 @@ export class UrlEncoder extends BaseTool {
                             <span class="text-xs opacity-75 mr-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevrons-left-right-square"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m10 15-3-3 3-3"/><path d="m14 9 3 3-3 3"/></svg>
                             </span>
-                            <h4>Encode</h4>
+                            <h4>${t('url-encoder', 'tools').encode}</h4>
                         </button>
                         <button 
                             role="radio"
@@ -52,7 +53,7 @@ export class UrlEncoder extends BaseTool {
                             <span class="text-xs opacity-75 mr-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
                             </span>
-                            <h4>Decode</h4>
+                            <h4>${t('url-encoder', 'tools').decode}</h4>
                         </button>
                     </div>
                 </div>
@@ -61,7 +62,7 @@ export class UrlEncoder extends BaseTool {
                     <textarea
                         id="input"
                         class="input-expandable"
-                        placeholder="Enter URL"
+                        placeholder="${t('url-encoder', 'tools').placeholder}"
                         rows="1"
                         .value=${this.input}
                         @input=${this.handleInput}
@@ -91,7 +92,7 @@ export class UrlEncoder extends BaseTool {
                     <textarea
                         id="output"
                         class="input-expandable mt-2 pr-6"
-                        placeholder="Output will appear here"
+                        placeholder="${t('url-encoder', 'tools').placeholder}"
                         rows="3"
                         readonly
                         .value=${this.output}

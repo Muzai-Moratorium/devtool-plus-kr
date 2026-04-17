@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 
 @customElement('data-format-convertor')
 export class DataFormatConvertor extends BaseTool {
@@ -21,7 +22,7 @@ export class DataFormatConvertor extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">Convert between different data formats including JSON, YAML, XML, and TOML.</p>
+                <p class="opacity-75">${t('data-format-convertor', 'tools').description}</p>
                 <hr />
                 <tool-file-dropzone 
                     accept=".json,.yaml,.yml,.xml,.toml" 

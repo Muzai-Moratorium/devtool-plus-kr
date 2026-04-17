@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 
 @customElement('diff-checker')
 export class DiffChecker extends BaseTool {
@@ -100,7 +101,7 @@ export class DiffChecker extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">Compare two texts to see the differences. Left pane is the original text, right pane is the modified text.</p>
+                <p class="opacity-75">${t('diff-checker', 'tools').description}</p>
                 <hr />
                 
                 <div class="stats-container">

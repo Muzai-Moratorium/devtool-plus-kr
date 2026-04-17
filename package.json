@@ -2,7 +2,7 @@
     "name": "devtool-plus",
     "displayName": "DevTool+",
     "publisher": "Fuzionix",
-    "description": "An extension that provides common I/O tools directly in code editor",
+    "description": "%extension.description%",
     "version": "0.5.0",
     "repository": {
         "type": "git",
@@ -58,7 +58,7 @@
             "activitybar": [
                 {
                     "id": "devtool-plus",
-                    "title": "DevTool+",
+                    "title": "%viewContainer.title%",
                     "icon": "media/activity-bar-icon.svg"
                 }
             ]
@@ -68,14 +68,14 @@
                 {
                     "type": "webview",
                     "id": "devtool-plus.toolsView",
-                    "name": "Input / Output",
+                    "name": "%view.toolsView.name%",
                     "icon": "media/activity-bar-icon.svg",
                     "visibility": "visible"
                 },
                 {
                     "type": "tree",
                     "id": "devtool-plus.toolsExplorer",
-                    "name": "Explorer",
+                    "name": "%view.toolsExplorer.name%",
                     "visibility": "visible"
                 }
             ]
@@ -83,32 +83,32 @@
         "commands": [
             {
                 "command": "devtool-plus.homeButton",
-                "title": "Home",
+                "title": "%command.homeButton.title%",
                 "icon": "$(home)"
             },
             {
                 "command": "devtool-plus.refreshButton",
-                "title": "Refresh",
+                "title": "%command.refreshButton.title%",
                 "icon": "$(refresh)"
             },
             {
                 "command": "devtool-plus.aboutButton",
-                "title": "About",
+                "title": "%command.aboutButton.title%",
                 "icon": "$(info)"
             },
             {
                 "command": "devtool-plus.searchButton",
-                "title": "Search Tools",
+                "title": "%command.searchButton.title%",
                 "icon": "$(search)"
             },
             {
                 "command": "devtool-plus.pinTool",
-                "title": "Pin Tool",
+                "title": "%command.pinTool.title%",
                 "icon": "$(pin)"
             },
             {
                 "command": "devtool-plus.unpinTool",
-                "title": "Unpin Tool",
+                "title": "%command.unpinTool.title%",
                 "icon": "$(pinned)"
             }
         ],

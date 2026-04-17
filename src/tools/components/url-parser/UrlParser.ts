@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state, query } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 import {
     adjustTextareaHeight,
 } from '../../../utils/util';
@@ -73,7 +74,7 @@ export class UrlParser extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">URLs are used to access resources on the web. They consist of several components, including the protocol, domain, path, and query parameters.</p>
+                <p class="opacity-75">${t('url-parser', 'tools').description}</p>
                 <hr />
 
                 <!-- Radio Group -->
@@ -88,7 +89,7 @@ export class UrlParser extends BaseTool {
                             <span class="text-xs opacity-75 mr-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ampersand-icon lucide-ampersand"><path d="M17.5 12c0 4.4-3.6 8-8 8A4.5 4.5 0 0 1 5 15.5c0-6 8-4 8-8.5a3 3 0 1 0-6 0c0 3 2.5 8.5 12 13"/><path d="M16 12h3"/></svg>
                             </span>
-                            <h4>Params</h4>
+                            <h4>${t('url-parser', 'tools').params}</h4>
                         </button>
                         <button 
                             role="radio"
@@ -99,7 +100,7 @@ export class UrlParser extends BaseTool {
                             <span class="text-xs opacity-75 mr-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-text-search-icon lucide-text-search"><path d="M21 5H3"/><path d="M10 12H3"/><path d="M10 19H3"/><circle cx="17" cy="15" r="3"/><path d="m21 19-1.9-1.9"/></svg>
                             </span>
-                            <h4>Detail</h4>
+                            <h4>${t('url-parser', 'tools').detail}</h4>
                         </button>
                     </div>
                 </div>
@@ -109,7 +110,7 @@ export class UrlParser extends BaseTool {
                     <textarea
                         id="input"
                         class="input-expandable"
-                        placeholder="Enter URL"
+                        placeholder="${t('url-parser', 'tools').placeholder}"
                         rows="1"
                         .value=${this.input}
                         @input=${this.handleInput}

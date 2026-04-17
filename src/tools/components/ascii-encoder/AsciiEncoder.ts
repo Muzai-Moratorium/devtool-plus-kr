@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 import {
     adjustTextareaHeight,
     renderCopyButton
@@ -23,7 +24,7 @@ export class AsciiEncoder extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">ASCII is a character encoding standard for electronic communication. It represents text in computers and other devices that use text.</p>
+                <p class="opacity-75">${t('ascii-encoder', 'tools').description}</p>
                 <hr />
 
                 <!-- Radio Group -->
@@ -38,7 +39,7 @@ export class AsciiEncoder extends BaseTool {
                             <span class="text-xs opacity-75 mr-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hash"><line x1="4" x2="20" y1="9" y2="9"/><line x1="4" x2="20" y1="15" y2="15"/><line x1="10" x2="8" y1="3" y2="21"/><line x1="16" x2="14" y1="3" y2="21"/></svg>
                             </span>
-                            <h4>Hex</h4>
+                            <h4>${t('ascii-encoder', 'tools').hex}</h4>
                         </button>
                         <button 
                             role="radio"
@@ -49,7 +50,7 @@ export class AsciiEncoder extends BaseTool {
                             <span class="text-xs opacity-75 mr-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-binary"><rect x="14" y="14" width="4" height="6" rx="2"/><rect x="6" y="4" width="4" height="6" rx="2"/><path d="M6 20h4"/><path d="M14 10h4"/><path d="M6 14h2v6"/><path d="M14 4h2v6"/></svg>
                             </span>
-                            <h4>Binary</h4>
+                            <h4>${t('ascii-encoder', 'tools').binary}</h4>
                         </button>
                     </div>
                 </div>
@@ -88,7 +89,7 @@ export class AsciiEncoder extends BaseTool {
                     <textarea
                         id="output"
                         class="input-expandable mt-2 pr-6 font-mono"
-                        placeholder="Output will appear here"
+                        placeholder="${t('ascii-encoder', 'tools').placeholder}"
                         rows="3"
                         readonly
                         .value=${this.output}

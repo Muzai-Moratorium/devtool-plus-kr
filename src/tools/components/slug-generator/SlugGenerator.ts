@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state, query } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 import {
     adjustTextareaHeight,
     renderCopyButton
@@ -31,7 +32,7 @@ export class SlugGenerator extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">Slug is a URL-friendly string, typically used to identify a resource in a way that is easy to read and type.</p>
+                <p class="opacity-75">${t('slug-generator', 'tools').description}</p>
                 <hr />
 
                 <!-- Input Label Field -->
@@ -84,7 +85,7 @@ export class SlugGenerator extends BaseTool {
                     <textarea
                         id="output"
                         class="input-expandable mt-2 pr-6"
-                        placeholder="Output will appear here"
+                        placeholder="${t('slug-generator', 'tools').placeholder}"
                         rows="3"
                         readonly
                         .value=${this.output}

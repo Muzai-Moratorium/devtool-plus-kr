@@ -6,6 +6,7 @@ import {
     renderCopyButton
 } from '../../../utils/util';
 import mimeDb from 'mime-db';
+import { t } from '../../../utils/i18n-web';
 
 @customElement('base64-encoder')
 export class Base64Encoder extends BaseTool {
@@ -36,7 +37,7 @@ export class Base64Encoder extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">Base64 is an encoding scheme that converts binary data into a text format using 64 characters (A-Z, a-z, 0-9, +, /) for safe data transmission across systems that handle text only.</p>
+                <p class="opacity-75">${t('base64-encoder', 'tools').description}</p>
                 <hr />
                 <!-- Hidden File Input -->
                 <input id="file-input" class="hidden" type="file" @change=${this.handleFileSelect}>
@@ -73,11 +74,11 @@ export class Base64Encoder extends BaseTool {
                 <div class="flex justify-between mt-2 gap-2">
                     <button id="encode" class="btn-primary gap-2" @click=${this.encode}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevrons-left-right-square"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m10 15-3-3 3-3"/><path d="m14 9 3 3-3 3"/></svg>
-                        <h4>Encode</h4>
+                        <h4>${t('base64-encoder', 'tools').encode}</h4>
                     </button>
                     <button id="decode" class="btn-outline gap-2" @click=${this.decode}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                        <h4>Decode</h4>
+                        <h4>${t('base64-encoder', 'tools').decode}</h4>
                     </button>
                 </div>
                 <!-- Arrow Divider -->
@@ -123,8 +124,7 @@ export class Base64Encoder extends BaseTool {
                             @click=${() => this.triggerDownload()}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
-                            <div class="flex items-center gap-2">
-                                <h4>${this.getDownloadButtonText()}</h4>
+                                 <h4>${this.getDownloadButtonText()}</h4>
                                 <span class="text-xs opacity-75">${this.formatFileSize(this.decodedFileSize)}</span>
                             </div>
                         </button>
@@ -136,7 +136,7 @@ export class Base64Encoder extends BaseTool {
                         <textarea
                             id="output"
                             class="input-expandable mt-2 pr-6"
-                            placeholder="Output will appear here"
+                            placeholder="${t('base64-encoder', 'tools').placeholder}"
                             rows="5"
                             .value=${this.outputText}
                             readonly
@@ -570,9 +570,9 @@ export class Base64Encoder extends BaseTool {
     private getDownloadButtonText(): string {
         const extension = this.getFileExtension();
         if (extension) {
-            return `Download ${extension.toUpperCase()}`;
+            return `${t('base64-encoder', 'tools').downloadPrefix} ${extension.toUpperCase()}`;
         }
-        return 'Download File';
+        return t('base64-encoder', 'tools').downloadFile;
     }
 
     private formatFileSize(bytes: number): string {

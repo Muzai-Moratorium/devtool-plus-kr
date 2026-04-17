@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 import { colord, extend } from 'colord';
 import mixPlugin from 'colord/plugins/mix';
 
@@ -91,7 +92,7 @@ export class ColorMixer extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">Mix multiple colors together to create a new color. Add up to 5 colors or remove colors as needed.</p>
+                <p class="opacity-75">${t('color-mixer', 'tools').description}</p>
                 <hr />
 
                 <!-- Result Color -->

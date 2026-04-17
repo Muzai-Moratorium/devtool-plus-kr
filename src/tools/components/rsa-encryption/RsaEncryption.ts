@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state, query } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 import { adjustTextareaHeight, renderCopyButton } from '../../../utils/util';
 
 type KeyFormat = 'PEM' | 'DER' | 'JWK';
@@ -41,7 +42,7 @@ export class RsaEncryption extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">RSA cryptography for secure data exchange. Encrypt messages with public keys, and decrypt with private keys.</p>
+                <p class="opacity-75">${t('rsa-encryption', 'tools').description}</p>
                 <hr />
 
                 <!-- Hidden File Inputs -->
@@ -60,7 +61,7 @@ export class RsaEncryption extends BaseTool {
                             <span class="text-xs opacity-75 mr-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock-icon lucide-lock"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                             </span>
-                            <h4>Encrypt</h4>
+                            <h4>${t('rsa-encryption', 'tools').encrypt}</h4>
                         </button>
                         <button 
                             role="radio"
@@ -71,7 +72,7 @@ export class RsaEncryption extends BaseTool {
                             <span class="text-xs opacity-75 mr-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock-open-icon lucide-lock-open"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
                             </span>
-                            <h4>Decrypt</h4>
+                            <h4>${t('rsa-encryption', 'tools').decrypt}</h4>
                         </button>
                     </div>
                 </div>

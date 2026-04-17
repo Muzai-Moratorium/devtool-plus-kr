@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state, query } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 import {
     adjustTextareaHeight,
     renderCopyButton
@@ -65,7 +66,7 @@ export class PasswordGenerator extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">Generate strong, secure passwords with customizable options for length and character types.</p>
+                <p class="opacity-75">${t('password-generator', 'tools').description}</p>
                 <hr />
 
                 <div class="grid grid-cols-1 min-[320px]:grid-cols-2 gap-2 mt-2 mb-4">

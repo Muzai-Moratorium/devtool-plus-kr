@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 import { colord, extend } from 'colord';
 import a11yPlugin from 'colord/plugins/a11y';
 
@@ -99,7 +100,7 @@ export class ContrastChecker extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">Check color contrast between text and background for accessibility compliance.</p>
+                <p class="opacity-75">${t('contrast-checker', 'tools').description}</p>
                 <hr />
 
                 <div class="flex flex-col min-[320px]:flex-row w-full gap-2">

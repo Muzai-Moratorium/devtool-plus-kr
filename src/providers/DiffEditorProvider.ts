@@ -251,9 +251,9 @@ export class DiffEditorProvider {
                         const message = event.data;
                         switch (message.type) {
                             case 'updateTool':
-                                currentToolId = message.tool.id;
-                                document.title = \`DevTool+ - \${message.tool.label}\`;
-                                break;
+                                 currentToolId = message.tool.id;
+                                 document.title = 'DevTool+ - ' + message.tool.label;
+                                 break;
                             case 'update':
                                 // lastState is resent from extension if needed
                                 break;

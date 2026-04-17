@@ -2,6 +2,7 @@ import * as fs from 'fs';
 import * as vscode from 'vscode';
 import { Tool } from '../types/tool';
 import { TOOLS } from '../constants/tools';
+import { t, getDictionary } from '../utils/i18n-host';
 
 export class SidePanelProvider implements vscode.WebviewViewProvider {
     public static readonly viewType = 'devtool-plus.toolsView';
@@ -89,6 +90,7 @@ export class SidePanelProvider implements vscode.WebviewViewProvider {
     }
 
     private getHtmlForWebview(toolComponentsUri: vscode.Uri, styleUri: vscode.Uri, toolIconUri: vscode.Uri): string {
+        const dictJson = JSON.stringify(getDictionary());
         return `
             <!DOCTYPE html>
             <html lang="en">
@@ -102,16 +104,16 @@ export class SidePanelProvider implements vscode.WebviewViewProvider {
                 <div id="empty-state" class="pt-2 px-4">
                     <div class="search-container mb-2">
                         <div class="relative">
-                            <input type="text" id="tool-search" placeholder="E.g. UUID Generator" class="w-full py-1 px-2" />
+                            <input type="text" id="tool-search" placeholder="${t('searchPlaceholder', 'webview')}" class="w-full py-1 px-2" />
                             <svg xmlns="http://www.w3.org/2000/svg" class="absolute right-2 top-1/2 transform -translate-y-1/2" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                         </div>
                     </div>
-                    <p class="mt-2 text-center opacity-70">Select a tool from the Tools Explorer</p>
+                    <p class="mt-2 text-center opacity-70">${t('emptyStateMessage', 'webview')}</p>
                     <hr />
 
                     <!-- Recent Tools Section -->
                     <div id="recent-tools" class="mt-4" style="display: none;">
-                        <h6 class="text-xs opacity-70 mb-2 font-medium">Recent Tools</h6>
+                        <h6 class="text-xs opacity-70 mb-2 font-medium">${t('recentTools', 'webview')}</h6>
                         <div id="recent-tools-list" class="flex flex-wrap max-content gap-2 mb-4">
                             <!-- Populated dynamically -->
                         </div>
@@ -133,7 +135,7 @@ export class SidePanelProvider implements vscode.WebviewViewProvider {
                 <div id="about-container" class="pt-2 px-4" style="display: none;">
                     <div class="tool-header flex align-middle items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info mr-2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                        <h4>About DevTool+</h4>
+                        <h4>${t('about', 'webview')}</h4>
                     </div>
                     <hr />
                     <div>
@@ -166,6 +168,7 @@ export class SidePanelProvider implements vscode.WebviewViewProvider {
                     </div>
                 </div>
                 <script>
+                    window.i18nDictionary = ${dictJson};
                     const vscode = acquireVsCodeApi();
 
                     window.vscode = vscode;

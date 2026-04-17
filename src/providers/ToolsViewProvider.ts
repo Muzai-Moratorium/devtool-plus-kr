@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import { Tool, ToolCategory } from '../types/tool';
 import { TOOLS } from '../constants/tools';
+import { t } from '../utils/i18n-host';
 
 export class ToolsViewProvider implements vscode.TreeDataProvider<vscode.TreeItem> {
     public static readonly viewType = 'devtool-plus.toolsExplorer';
@@ -123,7 +124,7 @@ export class ToolTreeItem extends vscode.TreeItem {
         public readonly context: vscode.ExtensionContext,
         public readonly isPinned: boolean = false
     ) {
-        super(tool.label, collapsibleState);
+        super(t(tool.id, 'tools').label || tool.label, collapsibleState);
         this.tooltip = tool.label;
         this.description = tool.version;
         this.contextValue = isPinned ? 'pinnedTool' : 'tool';
@@ -145,7 +146,8 @@ export class CategoryTreeItem extends vscode.TreeItem {
         public readonly category: ToolCategory,
         public readonly collapsibleState: vscode.TreeItemCollapsibleState
     ) {
-        super(category, collapsibleState);
+        const catName = category.split(' ').slice(1).join(' ');
+        super(category.split(' ')[0] + ' ' + (t(catName, 'categories') !== catName ? t(catName, 'categories') : catName), collapsibleState);
         this.contextValue = 'category';
     }
 }
@@ -154,7 +156,7 @@ export class PinnedSectionTreeItem extends vscode.TreeItem {
     constructor(
         public readonly collapsibleState: vscode.TreeItemCollapsibleState
     ) {
-        super('📌 Pinned', collapsibleState);
+        super('📌 ' + (t('pinned', 'webview') !== 'pinned' ? t('pinned', 'webview') : 'Pinned'), collapsibleState);
         this.contextValue = 'pinnedSection';
     }
 }

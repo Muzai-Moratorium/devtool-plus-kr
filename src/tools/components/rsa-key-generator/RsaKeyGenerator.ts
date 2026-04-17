@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state, query } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 import { adjustTextareaHeight, renderCopyButton } from '../../../utils/util';
 
 type KeySize = '1024' | '2048' | '4096';
@@ -31,7 +32,7 @@ export class RsaKeyGenerator extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">Generate RSA key pairs for asymmetric encryption, digital signatures, and secure communications.</p>
+                <p class="opacity-75">${t('rsa-key-generator', 'tools').description}</p>
                 <hr />
 
                 <!-- Key Settings -->

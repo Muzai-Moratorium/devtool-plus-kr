@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state, query } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 import { adjustTextareaHeight, renderCopyButton } from '../../../utils/util';
 
 type SignatureAlgorithm = 'RSA-PSS' | 'RSA-PKCS1-v1_5' | 'ECDSA';
@@ -48,7 +49,7 @@ export class SignatureVerifier extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">Digital signatures verify the authenticity and integrity of messages. This tool supports RSA and ECDSA signatures with various key formats.</p>
+                <p class="opacity-75">${t('signature-verifier', 'tools').description}</p>
                 <hr />
 
                 <!-- Hidden File Inputs -->
@@ -67,7 +68,7 @@ export class SignatureVerifier extends BaseTool {
                             <span class="text-xs opacity-75 mr-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-pen-line-icon lucide-file-pen-line"><path d="m18 5-2.414-2.414A2 2 0 0 0 14.172 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2"/><path d="M21.378 12.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/><path d="M8 18h1"/></svg>
                             </span>
-                            <h4>Sign</h4>
+                            <h4>${t('signature-verifier', 'tools').sign}</h4>
                         </button>
                         <button 
                             role="radio"
@@ -78,7 +79,7 @@ export class SignatureVerifier extends BaseTool {
                             <span class="text-xs opacity-75 mr-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-check-icon lucide-file-check"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></svg>
                             </span>
-                            <h4>Verify</h4>
+                            <h4>${t('signature-verifier', 'tools').verify}</h4>
                         </button>
                     </div>
                 </div>

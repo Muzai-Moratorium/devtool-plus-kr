@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state, query } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 import {
     adjustTextareaHeight,
 } from '../../../utils/util';
@@ -71,7 +72,7 @@ export class JwtInspector extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">JSON Web Token (JWT) is a compact, URL-safe means of representing claims to be transferred between two parties.</p>
+                <p class="opacity-75">${t('jwt-inspector', 'tools').description}</p>
                 <hr />
 
                 <!-- Input Field -->

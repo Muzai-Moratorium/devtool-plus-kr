@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 import { colord, extend } from 'colord';
 import mixPlugin from 'colord/plugins/mix';
 import namesPlugin from 'colord/plugins/names';
@@ -87,7 +88,7 @@ export class ColorPalette extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">Generate a harmonious color palette from a base color.</p>
+                <p class="opacity-75">${t('color-palette', 'tools').description}</p>
                 <hr />
 
                 <div>

@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state, query } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 import { renderCopyButton } from '../../../utils/util';
 import BezierEasing from 'bezier-easing';
 
@@ -242,7 +243,7 @@ export class CubicBezier extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">Create and visualize CSS cubic-bezier timing functions.</p>
+                <p class="opacity-75">${t('cubic-bezier', 'tools').description}</p>
                 <hr />
 
                 <!-- CSS Output Field with Colored Values -->

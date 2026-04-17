@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 
 @customElement('data-unit-convertor')
 export class DataUnitConvertor extends BaseTool {
@@ -23,7 +24,7 @@ export class DataUnitConvertor extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">Data unit conversion allows you to convert between different units of measurement for digital information, such as bytes to kilobytes or megabits to gigabits.</p>
+                <p class="opacity-75">${t('data-unit-convertor', 'tools').description}</p>
                 <hr />
 
                 <!-- Unit System Selection -->
@@ -35,7 +36,7 @@ export class DataUnitConvertor extends BaseTool {
                             class="radio-group-button flex justify-center items-center"
                             @click=${() => this.handleUnitChange('binary')}
                         >
-                            <h4>Binary</h4>
+                            <h4>${t('data-unit-convertor', 'tools').binary}</h4>
                             <span class="text-xs opacity-75 ml-1">(KiB, MiB, GiB)</span>
                         </button>
                         <button 

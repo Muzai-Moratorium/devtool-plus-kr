@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state, query } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 import {
     adjustTextareaHeight,
     renderCopyButton
@@ -31,7 +32,7 @@ export class MarkdownTableBuilder extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">Build Markdown tables with an easy-to-use interface. Add or remove rows and columns as needed.</p>
+                <p class="opacity-75">${t('markdown-table-builder', 'tools').description}</p>
                 <hr />
 
                 <!-- Table Editor -->

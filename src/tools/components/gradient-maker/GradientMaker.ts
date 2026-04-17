@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state, query } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 import { renderCopyButton } from '../../../utils/util';
 import { colord, extend } from 'colord';
 import mixPlugin from 'colord/plugins/mix';
@@ -267,7 +268,7 @@ export class GradientMaker extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">Create and customize CSS gradients with multiple color stops.</p>
+                <p class="opacity-75">${t('gradient-maker', 'tools').description}</p>
                 <hr />
 
                 <!-- Result Container -->

@@ -1,0 +1,12 @@
+{
+    "extension.description": "코드 에디터 안에서 일반적인 I/O 도구들을 곧바로 제공하는 익스텐션",
+    "viewContainer.title": "DevTool+",
+    "view.toolsView.name": "입출력 (I/O)",
+    "view.toolsExplorer.name": "탐색기",
+    "command.homeButton.title": "홈",
+    "command.refreshButton.title": "새로고침",
+    "command.aboutButton.title": "정보",
+    "command.searchButton.title": "도구 검색",
+    "command.pinTool.title": "도구 고정",
+    "command.unpinTool.title": "도구 고정 해제"
+}

@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
 import { customElement, state, query } from 'lit/decorators.js';
 import { BaseTool } from '../../base/BaseTool';
+import { t } from '../../../utils/i18n-web';
 import {
     adjustTextareaHeight,
     renderCopyButton
@@ -43,7 +44,7 @@ export class TokenGenerator extends BaseTool {
         return html`
             <style>${this.styles}</style>
             <div class="tool-inner-container">
-                <p class="opacity-75">Produces unique strings of customizable length and character sets for authentication, API keys, or session identifiers, ensuring randomness and unpredictability.</p>
+                <p class="opacity-75">${t('token-generator', 'tools').description}</p>
                 <hr />
 
                 <div class="grid grid-cols-1 min-[320px]:grid-cols-2 gap-2 mt-2 mb-4">
@@ -120,7 +121,7 @@ export class TokenGenerator extends BaseTool {
                     <textarea
                         id="output"
                         class="input-expandable mt-2 pr-6 font-mono break-all"
-                        placeholder="Output will appear here"
+                        placeholder="${t('token-generator', 'tools').placeholder}"
                         rows="3"
                         readonly
                         .value=${this.output}

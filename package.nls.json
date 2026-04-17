@@ -1,0 +1,12 @@
+{
+    "extension.description": "An extension that provides common I/O tools directly in code editor",
+    "viewContainer.title": "DevTool+",
+    "view.toolsView.name": "Input / Output",
+    "view.toolsExplorer.name": "Explorer",
+    "command.homeButton.title": "Home",
+    "command.refreshButton.title": "Refresh",
+    "command.aboutButton.title": "About",
+    "command.searchButton.title": "Search Tools",
+    "command.pinTool.title": "Pin Tool",
+    "command.unpinTool.title": "Unpin Tool"
+}
